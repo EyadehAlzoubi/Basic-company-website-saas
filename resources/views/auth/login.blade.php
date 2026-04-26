@@ -10,7 +10,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{ asset('backend/assets/images/favicon.ico')}}">
+        @include('partials.favicon')
 
         <!-- App css -->
         <link href="{{ asset('backend/assets/css/app.min.css')}}" rel="stylesheet" type="text/css" id="app-style" />
@@ -30,9 +30,12 @@
                             <div class="col-md-7 mx-auto">
                                 <div class="mb-0 border-0 p-md-5 p-lg-0 p-4">
                                     <div class="mb-4 p-0">
-                                        <a href="index.html" class="auth-logo">
-                                            <img src="{{ asset('backend/assets/images/logo-dark.png')}}" alt="logo-dark" class="mx-auto" height="28" />
-                                        </a>
+                                    <a href="index.html" class="auth-logo">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <img src="{{ asset('backend/assets/images/penguin.png') }}" height="28" />
+                                            <h2 class="mb-0">Penguin</h2>
+                                        </div>
+                                    </a>
                                     </div>
     
                                     <div class="pt-0">
