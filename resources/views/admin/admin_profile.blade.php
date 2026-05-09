@@ -40,7 +40,7 @@
 
                                     <div class="row">
                                         <div class="col-lg-6 col-xl-6">
-                                            <div class="card border mb-0">
+                                        <div class="card border mb-0">
 
                                                 <div class="card-header">
                                                     <div class="row align-items-center">
@@ -51,7 +51,8 @@
                                                 </div>
 
 
-                                                <form>
+                                            <form action="{{route('admin.profile.store')}}" method="POST" enctype="multipart/form-data">
+                                                @csrf
                                                 <div class="card-body">
                                                     <div class="form-group mb-3 row">
                                                         <label class="form-label">Name</label>
@@ -90,7 +91,7 @@
                                                     </div>
                                                     <button type="submit" class="btn btn-primary">Save Changes</button>
                                                 </div><!--end card-body-->
-                                                </form>
+                                            </form>
                                             </div>
                                         </div>
 
