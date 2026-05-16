@@ -1,0 +1,251 @@
+/* FrostKit — home page theme (pairs with frost-header.css) */
+body.frost-theme {
+  --heading-color: #0f172a;
+  --heading-bg: #0891b2;
+  --body-color: #64748b;
+  --light-color: #f8fafc;
+  --light-color2: #e0f2fe;
+  --frost-cyan: #22d3ee;
+  --frost-indigo: #6366f1;
+  --frost-rose: #fb7185;
+  --frost-slate: #0f172a;
+  --frost-muted: #94a3b8;
+  background-color: #f8fafc;
+}
+
+body.frost-theme h1,
+body.frost-theme h2,
+body.frost-theme h3,
+body.frost-theme h4 {
+  color: var(--heading-color);
+}
+
+/* —— Hero —— */
+body.frost-theme .lonyo-hero-section.light-bg {
+  background: linear-gradient(
+    145deg,
+    #ecfeff 0%,
+    #e0e7ff 42%,
+    #f8fafc 100%
+  ) !important;
+}
+
+body.frost-theme .lonyo-hero-content .hero-title {
+  background: linear-gradient(135deg, #0f172a 0%, #0e7490 55%, #4f46e5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+body.frost-theme .lonyo-hero-content .text {
+  color: #475569;
+}
+
+body.frost-theme .lonyo-hero-thumb::before,
+body.frost-theme .lonyo-hero-thumb::after {
+  background: linear-gradient(135deg, #22d3ee 0%, #6366f1 100%);
+}
+
+/* —— Buttons —— */
+body.frost-theme .lonyo-default-btn,
+body.frost-theme .lonyo-default-btn.hero-btn,
+body.frost-theme .lonyo-default-btn.video-btn,
+body.frost-theme .lonyo-default-btn.t-btn,
+body.frost-theme .lonyo-default-btn.faq-btn2 {
+  background: linear-gradient(135deg, #06b6d4 0%, #6366f1 100%);
+  border: none !important;
+  color: #fff !important;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 0 4px 18px rgba(6, 182, 212, 0.35);
+}
+
+body.frost-theme .lonyo-default-btn::after {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+body.frost-theme .lonyo-default-btn:hover {
+  color: #fff !important;
+  box-shadow: 0 8px 28px rgba(99, 102, 241, 0.45);
+}
+
+body.frost-theme .lonyo-default-btn.t-btn {
+  background: transparent;
+  border: 1px solid rgba(34, 211, 238, 0.5) !important;
+  color: #0e7490 !important;
+  box-shadow: none;
+}
+
+body.frost-theme .lonyo-default-btn.t-btn:hover {
+  background: rgba(34, 211, 238, 0.1);
+  color: #0f172a !important;
+}
+
+/* —— Feature cards —— */
+body.frost-theme .lonyo-service-wrap.light-bg {
+  background: #fff !important;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+}
+
+body.frost-theme .lonyo-service-wrap.light-bg:hover {
+  border-color: rgba(34, 211, 238, 0.45);
+  box-shadow: 0 12px 36px rgba(6, 182, 212, 0.15);
+  transform: translateY(-2px);
+}
+
+body.frost-theme .lonyo-service-title h4 {
+  color: #0f172a;
+}
+
+body.frost-theme .lonyo-service-data p {
+  color: #64748b;
+}
+
+body.frost-theme .lonyo-section-title.center h2,
+body.frost-theme .lonyo-section-title h2 {
+  color: #0f172a;
+}
+
+/* —— Dark panels (video + CTA) —— */
+body.frost-theme .bg-heading {
+  background: linear-gradient(
+    160deg,
+    #0f172a 0%,
+    #1e293b 45%,
+    #164e63 100%
+  ) !important;
+}
+
+body.frost-theme .bg-heading h2,
+body.frost-theme .bg-heading h4,
+body.frost-theme .bg-heading p,
+body.frost-theme .lonyo-cta-section.bg-heading .lonyo-default-content h2,
+body.frost-theme .lonyo-cta-section.bg-heading .lonyo-default-content p {
+  color: #e2e8f0;
+}
+
+body.frost-theme .lonyo-process-wrap {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+body.frost-theme .lonyo-process-wrap:hover {
+  border-color: rgba(34, 211, 238, 0.4);
+  background: rgba(34, 211, 238, 0.08);
+}
+
+body.frost-theme .lonyo-process-data p {
+  color: #94a3b8;
+}
+
+body.frost-theme .lonyo-process-title h4 {
+  color: #f1f5f9;
+}
+
+body.frost-theme .border-bottom {
+  border-color: rgba(148, 163, 184, 0.2) !important;
+}
+
+/* —— Tabs (get_all) —— */
+body.frost-theme .tabs li {
+  color: #64748b;
+}
+
+body.frost-theme .tabs .active-tab {
+  color: #0e7490;
+}
+
+body.frost-theme .tabs .active-tab::before {
+  background: linear-gradient(135deg, #06b6d4, #6366f1);
+}
+
+body.frost-theme .tabs-content li {
+  color: #475569;
+}
+
+/* —— FAQ —— */
+body.frost-theme .lonyo-faq-item.item2 {
+  border-bottom-color: rgba(34, 211, 238, 0.2);
+}
+
+body.frost-theme .lonyo-faq-header h4 {
+  color: #0f172a;
+  transition: color 0.2s ease;
+}
+
+body.frost-theme .lonyo-faq-item.open .lonyo-faq-header h4,
+body.frost-theme .lonyo-faq-item:hover .lonyo-faq-header h4 {
+  color: #0891b2;
+}
+
+body.frost-theme .lonyo-faq-body p {
+  color: #64748b;
+}
+
+body.frost-theme .lonyo-faq-shape::before {
+  background: linear-gradient(135deg, #22d3ee, #6366f1);
+}
+
+body.frost-theme .lonyo-default-content .data {
+  color: #64748b;
+}
+
+/* —— Testimonials —— */
+body.frost-theme .lonyo-t-wrap.wrap2.light-bg {
+  background: #fff !important;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+}
+
+body.frost-theme .lonyo-t-text p {
+  color: #334155;
+}
+
+body.frost-theme .lonyo-t-author-data p {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+body.frost-theme .lonyo-t-author-data span {
+  color: #64748b;
+}
+
+/* —— Section padding blocks —— */
+body.frost-theme .lonyo-section-padding2,
+body.frost-theme .lonyo-section-padding4,
+body.frost-theme .lonyo-section-padding6 {
+  background-color: transparent;
+}
+
+body.frost-theme .lonyo-section-padding {
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+/* —— Decorative shapes —— */
+body.frost-theme .lonyo-content-shape1 img,
+body.frost-theme .lonyo-content-shape3 img {
+  opacity: 0.35;
+  filter: hue-rotate(180deg) saturate(1.2);
+}
+
+/* —— Progress / scroll UI —— */
+body.frost-theme .progress-bar {
+  background: linear-gradient(90deg, #06b6d4, #6366f1);
+}
+
+body.frost-theme .progress-wrap svg path {
+  stroke: #06b6d4;
+}
+
+body.frost-theme .top-arrow svg path {
+  stroke: #0891b2;
+}
+
+body.frost-theme .preloader-inner span {
+  background: linear-gradient(135deg, #06b6d4, #6366f1);
+}
