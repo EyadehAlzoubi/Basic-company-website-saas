@@ -1,7 +1,7 @@
 <div class="lonyo-section-padding4">
     <div class="container">
       <div class="lonyo-section-title center">
-        <h2>Find answers to all questions below</h2>
+        <h2>FrostKit FAQ — answers at a glance</h2>
       </div>
       <div class="lonyo-faq-shape"></div>
       <div class="lonyo-faq-wrap1">

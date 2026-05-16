@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Penguin</title>
+  <title>FrostKit — Smart Finance</title>
 
   <link rel="shortcut icon" href="{{ asset('frontend/assets/images/favicon.ico') }}" type="image/x-icon">
   <link rel="icon" href="{{ asset('frontend/assets/images/favicon.ico') }}" type="image/x-icon">
@@ -30,9 +30,11 @@
 
   <link rel="stylesheet" href="{{asset('frontend/assets/css/main.css')}}">
   <link rel="stylesheet" href="{{asset('frontend/assets/css/app.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('frontend/assets/css/frost-header.css') }}">
+  <link rel="stylesheet" href="{{ asset('frontend/assets/css/frost-home.css') }}">
 </head>
 
-<body>
+<body class="frost-theme">
 
   <div class="preloader">
     <div class="preloader-inner">
@@ -56,7 +58,7 @@
       </svg>
       <div class="top-arrow">
         <svg width="12" height="20" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0.999999 1L8 8L1 15" stroke="#142D6F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M0.999999 1L8 8L1 15" stroke="#0891b2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
       </div>
     </div>
