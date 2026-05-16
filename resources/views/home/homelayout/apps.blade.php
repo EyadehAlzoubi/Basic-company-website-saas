@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="lonyo-cta-thumb" data-aos="fade-up" data-aos-duration="500">
-            <img src="assets/images/v1/cta-thumb.png" alt="">
+            <img src="{{asset('frontend/assets/images/v1/cta-thumb.png')}}" alt="">
           </div>
         </div>
         <div class="col-lg-6">
@@ -14,10 +14,10 @@
             <div class="lonyo-cta-info mt-50" data-aos="fade-up" data-aos-duration="900">
               <ul>
                 <li>
-                  <a href="https://www.apple.com/app-store/"><img src="assets/images/v1/app-store.svg" alt=""></a>
+                  <a href="https://www.apple.com/app-store/"><img src="{{asset('frontend/assets/images/v1/app-store.svg')}}" alt=""></a>
                 </li>
                 <li>
-                  <a href="https://playstore.com/"><img src="assets/images/v1/play-store.svg" alt=""></a>
+                  <a href="https://playstore.com/"><img src="{{asset('frontend/assets/images/v1/play-store.svg')}}" alt=""></a>
                 </li>
               </ul>
             </div>

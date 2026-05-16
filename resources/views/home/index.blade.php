@@ -14,14 +14,14 @@
 
 
   <div class="lonyo-content-shape3">
-    <img src="assets/images/shape/shape2.svg" alt="">
+    <img src="{{asset('frontend/assets/images/shape/shape2.svg')}}" alt="">
   </div>
   <!-- end content -->
 
   @include('home.homelayout.usability')
 
   <div class="lonyo-content-shape1">
-    <img src="assets/images/shape/shape3.svg" alt="">
+    <img src="{{asset('frontend/assets/images/shape/shape3.svg')}}" alt="">
   </div>
   <!-- end video -->
 
@@ -33,7 +33,7 @@
 
 
   <div class="lonyo-content-shape3">
-    <img src="assets/images/shape/shape2.svg" alt="">
+    <img src="{{asset('frontend/assets/images/shape/shape2.svg')}}" alt="">
   </div>
   <!-- end faq -->
 
