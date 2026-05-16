@@ -4,7 +4,7 @@
   <div class="lonyo-section-padding2 position-relative">
     <div class="container">
       <div class="lonyo-section-title center">
-        <h2>Features that make spending smarter</h2>
+        <h2>FrostKit features that make spending smarter</h2>
       </div>
       <div class="row">
         <div class="col-xl-4 col-lg-6 col-md-6">

@@ -9,8 +9,8 @@
         </div>
         <div class="col-lg-6">
           <div class="lonyo-default-content lonyo-cta-wrap" data-aos="fade-up" data-aos-duration="700">
-            <h2>Start a new level of money management</h2>
-            <p>Our finance apps and software are powerful tools for managing personal or business finances, helping users stay organized, track financial health, and make informed decisions.</p>
+            <h2>Take control with FrostKit today</h2>
+            <p>Download FrostKit for iOS or Android—stay organized, track your health score, and make confident money decisions on the go.</p>
             <div class="lonyo-cta-info mt-50" data-aos="fade-up" data-aos-duration="900">
               <ul>
                 <li>

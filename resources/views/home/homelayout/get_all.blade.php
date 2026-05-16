@@ -8,8 +8,8 @@
         </div>
         <div class="col-lg-7 d-flex align-items-center">
           <div class="lonyo-default-content pr-50" data-aos="fade-right" data-aos-duration="700">
-            <h2>Get all your financial updates in one place</h2>
-            <p class="data">This feature ensures you can easily stay on top of your finances by consolidating all updates into a single dashboard.</p>
+            <h2>All your FrostKit updates in one place</h2>
+            <p class="data">Accounts, bills, and investments flow into a single dashboard—so you never chase numbers across apps again.</p>
             <div class="mt-50">
               <ul class="tabs">
                 <li class="active-tab">

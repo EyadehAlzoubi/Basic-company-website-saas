@@ -3,10 +3,10 @@
       <div class="row">
         <div class="col-lg-7 d-flex align-items-center">
           <div class="lonyo-hero-content" data-aos="fade-up" data-aos-duration="700">
-            <h1 class="hero-title">Manage your finances more effectively</h1>
-            <p class="text">Track your daily finances automatically. Manage your money in a friendly & flexible way, making it easy to spend guilt-free.</p>
+            <h1 class="hero-title">Manage money smarter with FrostKit</h1>
+            <p class="text">Track spending, hit savings goals, and see every account in one calm dashboard—built for clarity, not clutter.</p>
             <div class="mt-50" data-aos="fade-up" data-aos-duration="900">
-              <a href="sign-up.html" class="lonyo-default-btn hero-btn">Create a free account</a>
+              <a href="sign-up.html" class="lonyo-default-btn hero-btn">Start free with FrostKit</a>
             </div>
           </div>
         </div>

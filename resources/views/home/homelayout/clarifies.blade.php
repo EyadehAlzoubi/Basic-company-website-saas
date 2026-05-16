@@ -9,8 +9,8 @@
         </div>
         <div class="col-lg-7 d-flex align-items-center">
           <div class="lonyo-default-content pl-50" data-aos="fade-up" data-aos-duration="700">
-            <h2>It clarifies all strategic financial decisions</h2>
-            <p class="data">With this tool, you can say goodbye to overspending, stay on track with your savings goals, and say goodbye to financial worries. Get ready for a clearer view of your finances like never before!</p>
+            <h2>FrostKit clarifies every financial decision</h2>
+            <p class="data">Say goodbye to overspending and guesswork. FrostKit keeps your goals visible and your numbers honest—so you always know what to do next.</p>
             <div class="lonyo-faq-wrap1 mt-50">
               <div class="lonyo-faq-item open" data-aos="fade-up" data-aos-duration="500">
                 <div class="lonyo-faq-header">

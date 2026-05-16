@@ -3,7 +3,7 @@
       <div class="lonyo-section-title">
         <div class="row">
           <div class="col-xl-8 col-lg-8">
-            <h2>Don't take our word for it, check user reviews</h2>
+            <h2>Why people trust FrostKit</h2>
           </div>
           <div class="col-xl-4 col-lg-4 d-flex align-items-center justify-content-end">
             <div class="lonyo-title-btn">
