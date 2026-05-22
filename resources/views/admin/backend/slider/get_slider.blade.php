@@ -41,7 +41,7 @@
                                                 </div>
 
 
-                                            <form action="{{route('update.review')}}" method="POST" enctype="multipart/form-data">
+                                            <form action="{{route('update.slider')}}" method="POST" enctype="multipart/form-data">
                                                 @csrf
                                                 <input type="hidden" name="id" value="{{$slider->id}}">
                                                 <div class="card-body">
@@ -61,7 +61,7 @@
                                                     <div class="form-group mb-3 row">
                                                         <label class="form-label">Description</label>
                                                         <div class="col-lg-12 col-xl-12">
-                                                            <textarea class="form-control" name="message">{{$slider->description}}</textarea>
+                                                            <textarea class="form-control" name="description">{{$slider->description}}</textarea>
                                                         </div>
                                                     </div>
                                                     <div class="form-group mb-3 row">
