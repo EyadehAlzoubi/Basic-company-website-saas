@@ -27,6 +27,8 @@ class ReviewController extends Controller
 
     public function StoreReview(Request $request)
     {
+
+        $save_url =null;
         if($request->file('image'))
         {
             $image = $request->file('image');
@@ -37,13 +39,14 @@ class ReviewController extends Controller
 
             $save_url = 'upload/review/'.$name_gen;
 
-            Review::create([
-                'name' =>$request->name,
-                'position' =>$request->position,
-                'message' =>$request->message,      
-                'image' =>$save_url,
-            ]);
         }
+
+        Review::create([
+            'name' =>$request->name,
+            'position' =>$request->position,
+            'message' =>$request->message,      
+            'image' =>$save_url,
+        ]);
 
         $notification = array(
             'message'      => 'Review Inserted Successfully :)',
@@ -52,4 +55,64 @@ class ReviewController extends Controller
 
         return redirect()->route('all.review')->with($notification);
     }
+
+
+    public function EditReview($id)
+    {
+        $review = Review::find($id);
+        return view('admin.backend.review.edit_review',compact('review'));
+
+
+    }
+
+
+    public function UpdateReview(Request $request)
+    {
+
+        $rev_id = $request->id;
+
+        if($request->file('image'))
+        {
+            $image = $request->file('image');
+            $manager = new ImageManager(new Driver());
+            $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
+            $img = $manager->read($image);
+            $img->resize(60,60)->save(public_path('upload/review/'.$name_gen));
+            $save_url = 'upload/review/'.$name_gen;
+
+
+            Review::find($rev_id)->update([
+                'name' =>$request->name,
+                'position' =>$request->position,
+                'message' =>$request->message,      
+                'image' =>$save_url,
+            ]);
+    
+            $notification = array(
+                'message'      => 'Review Updated Successfully :)',
+                'alert-type'   => 'success'
+            );
+
+        }else
+        {
+
+            Review::find($rev_id)->update([
+                'name' =>$request->name,
+                'position' =>$request->position,
+                'message' =>$request->message,      
+            ]);
+    
+            $notification = array(
+                'message'      => 'Review Updated Successfully :)',
+                'alert-type'   => 'success'
+            );
+
+
+        }
+
+
+
+        return redirect()->route('all.review')->with($notification);
+    }
+
 }
