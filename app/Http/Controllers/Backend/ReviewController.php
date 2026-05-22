@@ -115,4 +115,35 @@ class ReviewController extends Controller
         return redirect()->route('all.review')->with($notification);
     }
 
+
+    public function DeleteReview($id)
+    {
+
+
+        $item = Review::find($id);
+
+        if (!$item) {
+            return redirect()->back()->with([
+                'message' => 'Review not found',
+                'alert-type' => 'error'
+            ]);
+        }
+    
+        // Delete image if exists
+  
+         unlink($item->image);
+        
+    
+        // Delete database record
+        $item->delete();
+    
+        return redirect()->route('all.review')->with([
+            'message' => 'Review Deleted Successfully :)',
+            'alert-type' => 'success'
+        ]);
+    }
+
+
+
+
 }
