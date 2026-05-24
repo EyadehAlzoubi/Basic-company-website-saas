@@ -47,13 +47,13 @@
                                                     <div class="form-group mb-3 row">
                                                         <label class="form-label">Name</label>
                                                         <div class="col-lg-12 col-xl-12">
-                                                            <input class="form-control" type="text" name="name" ">
+                                                            <input class="form-control" type="text" name="name">
                                                         </div>
                                                     </div>
                                                     <div class="form-group mb-3 row">
                                                         <label class="form-label">position</label>
                                                         <div class="col-lg-12 col-xl-12">
-                                                            <input class="form-control" type="text" name="position" ">
+                                                            <input class="form-control" type="text" name="position">
                                                         </div>
                                                     </div>
 
