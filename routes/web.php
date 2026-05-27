@@ -87,6 +87,17 @@ Route::middleware('auth')->group(function () {
     });
 
 
+    Route::controller(HomeController::class)->group(function(){
+        Route::get('/get/clarigies' , 'GetClarigies')->name('get.clarigies');
+        Route::post('/update/clarigies' , 'UpdateClarigies')->name('update.clarigies');
+
+ 
+    });
+
+
+    
+
+
 });
 
 
