@@ -1,16 +1,20 @@
+@php 
+  $clarifi = App\Models\Clarifi::find(1);
+@endphp
+
 
 <section class="lonyo-section-padding6">
     <div class="container">
       <div class="row">
         <div class="col-lg-5">
           <div class="lonyo-content-thumb" data-aos="fade-up" data-aos-duration="700">
-            <img src="{{asset('frontend/assets/images/v1/content-thumb.png')}}" alt="">
+            <img src="{{asset($clarifi->image)}}" alt="">
           </div>
         </div>
         <div class="col-lg-7 d-flex align-items-center">
           <div class="lonyo-default-content pl-50" data-aos="fade-up" data-aos-duration="700">
-            <h2>FrostKit clarifies every financial decision</h2>
-            <p class="data">Say goodbye to overspending and guesswork. FrostKit keeps your goals visible and your numbers honest—so you always know what to do next.</p>
+            <h2>{{$clarifi->title}}</h2>
+            <p class="data">{{$clarifi->description}}</p>
             <div class="lonyo-faq-wrap1 mt-50">
               <div class="lonyo-faq-item open" data-aos="fade-up" data-aos-duration="500">
                 <div class="lonyo-faq-header">
