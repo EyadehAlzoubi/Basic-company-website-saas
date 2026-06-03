@@ -238,6 +238,33 @@ class HomeController extends Controller
 
     }
 
+    public function StoreConnect(Request $request){
+
+
+        Connect::create([
+            'title' =>$request->title,
+            'description' =>$request->description,
+        ]);
+
+        $notification = array(
+            'message'      => 'Connect Inserted Successfully :)',
+            'alert-type'   => 'success'
+        );
+
+        return redirect()->route('get.connect')->with($notification);
+
+    }
+
+    public function UpdateConnect(Request $request,$id)
+    {
+
+        $connect = Connect::findOrFail($id);
+        $connect->update($request->only(['title','description']));
+        return response()->json(['success' => true , 'message' => 'Updated Successfully']);
+
+
+    }
+
 
     
 }
