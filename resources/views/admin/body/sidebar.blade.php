@@ -94,13 +94,29 @@
                             <li>
                                 <a href="#clarigies" data-bs-toggle="collapse">
                                     <i data-feather="alert-octagon"></i>
-                                    <span> Clarigies Sutup </span>
+                                    <span> Clarifies Sutup </span>
                                     <span class="menu-arrow"></span>
                                 </a>
                                 <div class="collapse" id="clarigies">
                                     <ul class="nav-second-level">
                                         <li>
                                             <a href="{{ route('get.clarigies')}}" class="tp-link">Get Clarigies</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a href="#Usability" data-bs-toggle="collapse">
+                                    <i data-feather="alert-octagon"></i>
+                                    <span> Usability Sutup </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <div class="collapse" id="Usability">
+                                    <ul class="nav-second-level">
+                                        <li>
+                                            <a href="{{ route('get.usability')}}" class="tp-link">Get Usability</a>
                                         </li>
 
                                     </ul>
