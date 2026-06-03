@@ -27,47 +27,95 @@
           </div>
         </div>
       </div>
+
+      @php 
+           $connects = App\Models\Connect::whereIn('id' ,[1,2,3])->get()->keyBy('id');
+      @endphp
       <div class="row">
+
+        @foreach ($connects as $connect)
+
+       
+
         <div class="col-xl-4 col-md-6">
           <div class="lonyo-process-wrap" data-aos="fade-up" data-aos-duration="500">
             <div class="lonyo-process-number">
-              <img src="{{asset('frontend/assets/images/v1/n1.svg')}}" alt="">
+              <img src="{{asset('frontend/assets/images/v1/n'.$connect->id.'.svg')}}" alt="">
             </div>
             <div class="lonyo-process-title">
-              <h4>Connect Your Accounts</h4>
+              <h4 class="editable-title" contenteditable="{{ auth()->check() ? 'true' : 'false'}}" data-id="{{$connect->id}}">{{$connect->title}}</h4>
             </div>
             <div class="lonyo-process-data">
-              <p>Link your bank, credit card or investment accounts to automatically track transactions and get a complete financial overview</p>
+              <p class="editable-description" contenteditable="{{ auth()->check() ? 'true' : 'false'}}" data-id="{{$connect->id}}">{{$connect->description}}</p>
             </div>
           </div>
         </div>
-        <div class="col-xl-4 col-md-6">
-          <div class="lonyo-process-wrap" data-aos="fade-up" data-aos-duration="700">
-            <div class="lonyo-process-number">
-              <img src="{{asset('frontend/assets/images/v1/n2.svg')}}" alt="">
-            </div>
-            <div class="lonyo-process-title">
-              <h4>Set Budgets & Goals</h4>
-            </div>
-            <div class="lonyo-process-data">
-              <p>Define your spending limits and savings goals for categories like groceries, bills or future investments to stay on track.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4 col-md-6">
-          <div class="lonyo-process-wrap" data-aos="fade-up" data-aos-duration="900">
-            <div class="lonyo-process-number">
-              <img src="{{asset('frontend/assets/images/v1/n3.svg')}}" alt="">
-            </div>
-            <div class="lonyo-process-title">
-              <h4>Monitor & Automate</h4>
-            </div>
-            <div class="lonyo-process-data">
-              <p>Check your financial dashboard for regular updates and set up automatic payments or savings to simplify management.</p>
-            </div>
-          </div>
-        </div>
-        <div class="border-bottom" data-aos="fade-up" data-aos-duration="500"></div>
+
+        @endforeach
+
+
       </div>
     </div>
   </div>
+
+
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    function saveChanges(element)
+    {
+        let connectId = element.dataset.id;
+
+        let field = element.classList.contains("editable-title") 
+            ? "title"
+            : "description";
+
+        let newValue = element.innerText.trim();
+
+        fetch(`/update-connect/${connectId}`, {
+            method: "POST",
+            headers: {
+                "X-CSRF-TOKEN": document
+                    .querySelector('meta[name="csrf-token"]')
+                    .getAttribute("content"),
+
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+                [field]: newValue
+            })
+        })
+
+        .then(response => response.json())
+
+        .then(data => {
+            if (data.success) {
+                console.log(`${field} updated successfully`);
+            }
+        })
+
+        .catch(error => console.error("Error:", error));
+    }
+
+    // Auto save when Enter key
+    document.addEventListener("keydown", function (e) {
+
+        if (e.key === "Enter") {
+            e.preventDefault();
+            saveChanges(e.target);
+        }
+    });
+
+    // Auto save when losing focus
+
+    document.querySelectorAll(".editable-title,.editable-description").forEach(el => {
+      el.addEventListener("blur",function(){
+        saveChanges(el);
+      });
+    });
+});
+</script>
