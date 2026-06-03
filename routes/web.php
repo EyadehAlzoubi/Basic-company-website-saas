@@ -86,7 +86,6 @@ Route::middleware('auth')->group(function () {
         Route::get('/delete/feature{id}' , 'DeleteFeature')->name('delete.feature');   
     });
 
-
     Route::controller(HomeController::class)->group(function(){
         Route::get('/get/clarigies' , 'GetClarigies')->name('get.clarigies');
         Route::post('/update/clarigies' , 'UpdateClarigies')->name('update.clarigies');
@@ -94,6 +93,11 @@ Route::middleware('auth')->group(function () {
  
     });
 
+
+    Route::controller(HomeController::class)->group(function(){
+        Route::get('/get/usability' , 'GetUsability')->name('get.usability');
+        Route::post('/update/usability' , 'UpdateUsability')->name('update.usability');
+    });
 
     
 
