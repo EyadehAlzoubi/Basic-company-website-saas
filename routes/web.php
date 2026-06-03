@@ -99,6 +99,18 @@ Route::middleware('auth')->group(function () {
         Route::post('/update/usability' , 'UpdateUsability')->name('update.usability');
     });
 
+
+
+    Route::controller(HomeController::class)->group(function(){
+        Route::get('/all/connect' , 'AllConnect')->name('get.connect');
+        Route::get('/add/connect' , 'AddConnect')->name('add.connect');
+
+
+
+    });
+
+    
+
     
 
 

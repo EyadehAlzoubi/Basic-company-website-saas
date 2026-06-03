@@ -1,10 +1,15 @@
+@php 
+  $usability = App\Models\Usability::find(1);
+@endphp
+
+
 <div class="lonyo-section-padding bg-heading position-relative sectionn">
     <div class="container">
       <div class="row">
         <div class="col-lg-5">
           <div class="lonyo-video-thumb">
-            <img src="{{asset('frontend/assets/images/v1/video-thumb.png')}}" alt="">
-            <a class="play-btn video-init" href="https://www.youtube.com/watch?v=fgZc7mAYIY8">
+            <img src="{{asset($usability->image)}}" alt="">
+            <a class="play-btn video-init" href="{{$usability->youtube}}">
               <img src="{{asset('frontend/assets/images/v1/play-icon.svg')}}" alt="">
               <div class="waves wave-1"></div>
               <div class="waves wave-2"></div>
@@ -14,10 +19,10 @@
         </div>
         <div class="col-lg-7 d-flex align-items-center">
           <div class="lonyo-default-content lonyo-video-section pl-50" data-aos="fade-up" data-aos-duration="500">
-            <h2>Simple, intuitive, built for real life</h2>
-            <p>FrostKit is cloud-based finance for people and teams—manage cash flow, invoices, and goals without the spreadsheet headache.</p>
+            <h2>{{$usability->title}}</h2>
+            <p>{{$usability->description}}</p>
             <div class="mt-50" data-aos="fade-up" data-aos-duration="700">
-              <a class="lonyo-default-btn video-btn" href="contact-us.html">Get the FrostKit app</a>
+              <a class="lonyo-default-btn video-btn" href="contact-us.html">{{$usability->link}}</a>
             </div>
           </div>
         </div>
