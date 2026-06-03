@@ -41,7 +41,7 @@
                                                 </div>
 
 
-                                            <form action="{{route('store.feature')}}" method="POST" enctype="multipart/form-data">
+                                            <form action="{{route('store.connect')}}" method="POST" enctype="multipart/form-data">
                                                 @csrf
                                                 <div class="card-body">
                                                     <div class="form-group mb-3 row">
