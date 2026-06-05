@@ -24,7 +24,6 @@
                             <tr>
                                 <th>Sl</th>
                                 <th>Title</th>
-                                <th>Icon</th>
                                 <th>Descroption</th>
                                 <th>Action</th>
 
@@ -36,7 +35,6 @@
                                 <tr>
                                     <td>{{$key + 1}}</td>
                                     <td>{{$item->title}}</td>
-                                    <td>{{$item->icon}}</td>
                                     <td>{{Str::limit($item->description,50,'....')}}</td>
                                     <td>
                                         <a href="{{ route('edit.feature', $item->id)}}" class="btn btn-success btn-sm">Edit</a>
