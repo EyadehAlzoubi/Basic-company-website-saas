@@ -270,6 +270,27 @@ class HomeController extends Controller
         return view('admin.backend.faqs.all_faqs',compact('faqs'));
     }
 
+    public function AddFaqs()
+    {
+        return view('admin.backend.faqs.add_faqs');
+    }
+
+    public function StoreFaqs(Request $request)
+    {
+
+        Faq::create([
+            'title' =>$request->title,
+            'description' =>$request->description,
+        ]);
+
+        $notification = array(
+            'message'      => 'Faqs Inserted Successfully :)',
+            'alert-type'   => 'success'
+        );
+
+        return redirect()->route('all.faqs')->with($notification);
+    }
+
 
     
 }
