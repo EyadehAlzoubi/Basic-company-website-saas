@@ -160,7 +160,7 @@
 
 
                                         <li>
-                                            <a href="{{ route('add.connect')}}" class="tp-link">Add Faqs</a>
+                                            <a href="{{ route('add.faqs')}}" class="tp-link">Add Faqs</a>
                                         </li>
 
 
