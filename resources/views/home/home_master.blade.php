@@ -102,7 +102,6 @@
   <script src="{{asset('frontend/assets/js/pricing.min.js')}}"></script>
   <script src="{{asset('frontend/assets/js/countdown.js')}}"></script>
   <script src="{{asset('frontend/assets/js/skillbar.js')}}"></script>
-  <script src="{{asset('frontend/assets/js/slick-animation.js')}}"></script>
   <script src="{{asset('frontend/assets/js/slick-animation.min.js')}}"></script>
   <script src="{{asset('frontend/assets/js/faq.js')}}"></script>
   <script src="{{asset('frontend/assets/js/isotope.pkgd.min.js')}}"></script>
@@ -112,7 +111,6 @@
   <script src="{{asset('frontend/assets/js/niceselect.js')}}"></script>
   <script src="{{asset('frontend/assets/js/wow.min.js')}}"></script>
   <script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyArZVfNvjnLNwJZlLJKuOiWHZ6vtQzzb1Y"></script>
-  <script src="{{asset('frontend/assets/js/slick.js')}}"></script>
 
   <script src="{{asset('frontend/assets/js/app.js')}}"></script>
 

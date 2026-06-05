@@ -46,7 +46,7 @@
                                         <!-- item-->
                                         <a href="javascript:void(0);" class="dropdown-item notify-item text-muted link-primary active">
                                             <div class="notify-icon">
-                                                <img src="assets/images/users/user-12.jpg" class="img-fluid rounded-circle" alt="" />
+                                                <img src="{{ asset('backend/assets/images/users/user-12.jpg') }}" class="img-fluid rounded-circle" alt="" />
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <p class="notify-details">Carl Steadham</p>
@@ -60,7 +60,7 @@
                                         <!-- item-->
                                         <a href="javascript:void(0);" class="dropdown-item notify-item text-muted link-primary">
                                             <div class="notify-icon">
-                                                <img src="assets/images/users/user-2.jpg" class="img-fluid rounded-circle" alt="" />
+                                                <img src="{{ asset('backend/assets/images/users/user-2.jpg') }}" class="img-fluid rounded-circle" alt="" />
                                             </div>
                                             <div class="notify-content">
                                                 <div class="d-flex align-items-center justify-content-between">
