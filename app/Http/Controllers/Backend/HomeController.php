@@ -8,6 +8,7 @@ use App\Models\Feature;
 use App\Models\Clarifi;
 use App\Models\Usability;
 use App\Models\Connect;
+use App\Models\Faq;
 use Intervention\Image\ImageManager;
 use Intervention\Image\Drivers\Gd\Driver;
 
@@ -257,12 +258,16 @@ class HomeController extends Controller
 
     public function UpdateConnect(Request $request,$id)
     {
-
         $connect = Connect::findOrFail($id);
         $connect->update($request->only(['title','description']));
         return response()->json(['success' => true , 'message' => 'Updated Successfully']);
+    }
 
 
+    public function AllFaqs()
+    {
+        $faqs = Faq::latest()->get();
+        return view('admin.backend.faqs.all_faqs',compact('faqs'));
     }
 
 
