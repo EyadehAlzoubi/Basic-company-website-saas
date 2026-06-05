@@ -111,6 +111,11 @@ Route::middleware('auth')->group(function () {
 
     Route::controller(HomeController::class)->group(function(){
         Route::get('/all/faqs' , 'AllFaqs')->name('all.faqs');
+        Route::get('/add/faqs' , 'AddFaqs')->name('add.faqs');
+        Route::post('/store/faqs' , 'StoreFaqs')->name('store.faqs');
+
+
+        
 
     });
     
