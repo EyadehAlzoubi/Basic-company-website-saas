@@ -292,5 +292,50 @@ class HomeController extends Controller
     }
 
 
+
+    public function EditFaqs($id)
+    {
+        $faqs = Faq::find($id);
+        return view('admin.backend.faqs.edit_faqs',compact('faqs'));
+    }
+
+
+    public function UpdateFaqs(Request $request)
+    {
+
+
+        $faq_id = $request->id;
+
+        Faq::find($faq_id)->update([
+            'title' =>$request->title,
+            'description' =>$request->description,
+        ]);
+
+        $notification = array(
+            'message'      => 'Faqs Updated Successfully :)',
+            'alert-type'   => 'success'
+        );
+
+        return redirect()->route('all.faqs')->with($notification);
+    }
+
+
+    public function DeleteFaqs($id){
+
+        Faq::find($id)->delete();
+
+        $notification = array(
+            'message'      => 'Faq Deleted Successfully :)',
+            'alert-type'   => 'success'
+        );
+
+        return redirect()->back()->with($notification);
+    }
+
+
+
+    
+
+
     
 }
